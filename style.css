@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgoldenrodyellow;
+}
+
+section ul {
+    z-index: 3;
+    width: 50%;
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+section ul li {
+    position: relative;
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+    backdrop-filter: blur(2px);
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    -webkit-box-shadow: 0 5px 45px 0 rgba(0, 0, 0, 0.01);
+    -moz-box-shadow:    0 5px 45px 0 rgba(0, 0, 0, 0.01);
+    box-shadow:         0 5px 45px 0 rgba(0, 0, 0, 0.01);
+}
+
+section ul li:hover {
+    transform: translateY(-40px);
+}
+
+section ul li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: 0.5s;
+    transform: translateX(300px) skewX(45deg);
+}
+
+section ul li:hover::before {
+    transform: translateX(-300px) skewX(45deg);
+}
+
+.color1 {
+    background-color: red;
+    position: absolute;
+    top: 5%;
+    left: 35%;
+    width: 300px;
+    height: 300px;
+}
+
+.color2 {
+    z-index: 1;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    background-color: cyan;
+    width: 500px;
+    height: 500px;
+}
+
+.color3 {
+    z-index: 1;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    background-color: cornflowerblue;
+    width: 500px;
+    height: 600px;
+}
+
+.color4 {
+    z-index: 1;
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    background-color: lightgoldenrodyellow;
+    width: 350px;
+    height: 350px;
+}
+
+.shield {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(170px);
+}
+
+.separator {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 -3px 20px 0 rgba(50, 50, 50, 0.75);
+}
+
